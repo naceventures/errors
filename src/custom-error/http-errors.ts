@@ -57,16 +57,31 @@ const httpEntries: HttpEntry[] = Object.entries(HTTP_STATUS_CODES).map(
    })
 )
 
-function fromHttpCode(code: Code): HttpEntry | undefined {
-   return httpEntries.find((entry) => entry.code === code)
+function fromHttpCode(code: Code): HttpEntry {
+   const entry = httpEntries.find((entry) => entry.code === code)
+   return entry ?? {
+      code: '500_internal_server_error',
+      status: 500,
+      message: 'internal_server_error'
+   }
 }
 
-function fromHttpStatus(status: Status): HttpEntry | undefined {
-   return httpEntries.find((entry) => entry.status === status)
+function fromHttpStatus(status: Status): HttpEntry {
+   const entry = httpEntries.find((entry) => entry.status === status)
+   return entry ?? {
+      code: '500_internal_server_error',
+      status: 500,
+      message: 'internal_server_error'
+   }
 }
 
-function fromHttpMessage(message: Message): HttpEntry | undefined {
-   return httpEntries.find((entry) => entry.message === message)
+function fromHttpMessage(message: Message): HttpEntry {
+   const entry = httpEntries.find((entry) => entry.message === message)
+   return entry ?? {
+      code: '500_internal_server_error',
+      status: 500,
+      message: 'internal_server_error'
+   }
 }
 
 // ========== Export ==========
