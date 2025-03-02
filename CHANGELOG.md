@@ -1,5 +1,11 @@
 # @naceventures/errors
 
+## 1.0.1
+
+### Patch Changes
+
+- Added defaults for HTTP helpers functions
+
 ## 1.0.0
 
 ### Major Changes
