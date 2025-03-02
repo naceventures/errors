@@ -1,0 +1,44 @@
+{
+   "$schema": "https://json.schemastore.org/tsconfig",
+   "compilerOptions": {
+      /* Language and Environment */
+      "target": "esnext", // Output code in ESnext
+      "lib": ["esnext", "dom"], // Include type definitions for ES2023 features
+
+      /* Modules */
+      "module": "esnext", // Module system
+      "moduleResolution": "bundler", // Module resolution system
+      "resolveJsonModule": true,
+
+      /* Emit */
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "removeComments": true,
+
+      /* Javascript Support */
+      "allowJs": true,
+      "checkJs": true,
+
+      /* Interop Constraints */
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+
+      /* Type Checking */
+      "strict": true,
+      "allowUnreachableCode": false,
+
+      /* Completeness */
+      "skipLibCheck": true,
+
+      /* Project */
+      "outDir": "dist",
+      "baseUrl": "src",
+      // "paths": {
+      //    "@/*": ["./*"]
+      // }
+   },
+   "include": ["src/**/*", "tsup.config.ts"],
+   "exclude": ["node_modules", "dist"]
+}

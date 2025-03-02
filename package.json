@@ -1,0 +1,57 @@
+{
+   "name": "@naceventures/errors",
+   "description": "Error utilities",
+   "author": "naceventures",
+   "version": "0.0.1",
+   "private": false,
+   "type": "module",
+   "main": "index.js",
+   "exports": {
+      ".": {
+         "types": "./dist/index.d.ts",
+         "import": "./dist/index.js",
+         "default": "./dist/index.js"
+      }
+   },
+   "scripts": {
+      "preinstall": "npx only-allow pnpm",
+      "dev": "tsup --watch ./src/index.ts",
+      "build": "shx rm -rf ./dist/* && tsup",
+      "test": "vitest",
+      "changeset": "changeset",
+      "version": "changeset version"
+   },
+   "engines": {
+      "node": ">=22.14.x",
+      "pnpm": ">=9.14.2"
+   },
+   "files": [
+      "dist"
+   ],
+   "keywords": [
+      "errors",
+      "utilities"
+   ],
+   "homepage": "https://github.com/naceventures/errors",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/naceventures/errors"
+   },
+   "devDependencies": {
+      "@changesets/cli": "^2.28.1",
+      "@eslint/compat": "^1.2.7",
+      "@eslint/js": "^9.21.0",
+      "eslint": "^9.21.0",
+      "eslint-config-prettier": "^10.0.2",
+      "prettier": "^3.5.2",
+      "shx": "^0.3.4",
+      "tsup": "^8.4.0",
+      "tsx": "^4.19.3",
+      "typescript": "^5.7.3",
+      "typescript-eslint": "^8.25.0",
+      "vitest": "^3.0.7"
+   },
+   "dependencies": {
+      "clean-stack": "^5.2.0"
+   }
+}
